@@ -104,6 +104,15 @@ $(document).ready(function() {
 });
 
 function displayOutput() {
-  $('#output').css('margin-top', '20px');
-  $('#output').text('majorKey is equal to ' + majorKey).fadeIn('slow');
+  $('#output1').css('margin', 'auto');
+  $('#output1').css('background', '#fc78a3');
+  $('#output1').css('font-size', '10em');
+  $('#output1').text('majorKey is equal to ').fadeIn('slow',displaySecondOutput);
+}
+
+function displaySecondOutput() {
+  $('#output2').css('margin', 'auto');
+  $('#output2').css('background', '#fc7aee');
+  $('#output2').css('font-size', '30em');
+  $('#output2').text(majorKey).fadeIn('slow');
 }

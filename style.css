@@ -1,0 +1,23 @@
+body {
+  background: #e25a6f;
+}
+
+.btn {
+  margin-bottom: 20px;
+}
+
+.btn button {
+  background: #66f9f4;
+}
+
+.output {
+  text-align: center;
+}
+
+#output1 {
+  padding-bottom: 0.2em;
+}
+
+#intro {
+  text-align: center;
+}
