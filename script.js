@@ -38,7 +38,7 @@ is more than one character in the string. Return `val` and set `majorKey` to the
 
 var majorKey = 42;
 
-if(majorKey > 53) {
+if (majorKey > 53) {
     majorKey += 42;
 } else {
     majorKey -= 13;
@@ -48,7 +48,7 @@ majorKey += '11';
 
 var keyChars = [];
 
-for(var i = 0; i < majorKey.length; i++) {
+for (var i = 0; i < majorKey.length; i++) {
     keyChars[i] = majorKey.charAt(i);
 }
 
@@ -57,7 +57,7 @@ keyChars.shift();
 
 var reverse = '';
 
-for(var i = keyChars.length-1; i >= 0; i--) {
+for (var i = keyChars.length - 1; i >= 0; i--) {
     reverse += keyChars[i];
 }
 
@@ -77,14 +77,14 @@ if (majorKey < 60) {
 }
 
 i = 10;
-while(i > 0){
+while (i > 0) {
     majorKey++;
     i--;
 }
 
-function convertVal(val){
+function convertVal(val) {
     val = val.toString();
-    if(val.length > 1){
+    if (val.length > 1) {
         val = val.substr(1);
     }
     // majorKey = val;
@@ -95,4 +95,6 @@ majorKey = convertVal(majorKey);
 
 console.log("majorKey at 96: ", majorKey);
 
-
+document.addEventListener("DOMContentLoaded", function () {
+    document.getElementById("output").innerHTML = 'majorKey is equal to ' + majorKey;
+});
