@@ -29,7 +29,7 @@ is more than one character in the string. Return `val` and set `majorKey` to the
 
 12. Call the function.
 
-13. Console log `majorKey`. 
+13. Console log `majorKey`.
 
 14. Create an index.html file, link in this JavaScript file. Load in the browser and check the value from Step 13.
 
@@ -39,9 +39,9 @@ is more than one character in the string. Return `val` and set `majorKey` to the
 var majorKey = 42;
 
 if (majorKey > 53) {
-    majorKey += 42;
+  majorKey += 42;
 } else {
-    majorKey -= 13;
+  majorKey -= 13;
 }
 
 majorKey += '11';
@@ -49,7 +49,7 @@ majorKey += '11';
 var keyChars = [];
 
 for (var i = 0; i < majorKey.length; i++) {
-    keyChars[i] = majorKey.charAt(i);
+  keyChars[i] = majorKey.charAt(i);
 }
 
 keyChars.pop();
@@ -58,7 +58,7 @@ keyChars.shift();
 var reverse = '';
 
 for (var i = keyChars.length - 1; i >= 0; i--) {
-    reverse += keyChars[i];
+  reverse += keyChars[i];
 }
 
 majorKey = parseInt(majorKey);
@@ -69,32 +69,41 @@ reverse = parseInt(reverse);
 majorKey += reverse;
 
 if (majorKey < 60) {
-    majorKey = 14;
+  majorKey = 14;
 } else if (majorKey === 2930) {
-    majorKey = 27;
+  majorKey = 27;
 } else {
-    majorKey = 2;
+  majorKey = 2;
 }
 
 i = 10;
 while (i > 0) {
-    majorKey++;
-    i--;
+  majorKey++;
+  i--;
 }
 
 function convertVal(val) {
-    val = val.toString();
-    if (val.length > 1) {
-        val = val.substr(1);
-    }
-    // majorKey = val;
-    return val;
+  val = val.toString();
+  if (val.length > 1) {
+    val = val.substr(1);
+  }
+  // majorKey = val;
+  return val;
 }
 
 majorKey = convertVal(majorKey);
 
 console.log("majorKey at 96: ", majorKey);
 
-document.addEventListener("DOMContentLoaded", function () {
-    document.getElementById("output").innerHTML = 'majorKey is equal to ' + majorKey;
+// document.addEventListener("DOMContentLoaded", function () {
+//     document.getElementById("output").innerHTML = 'majorKey is equal to ' + majorKey;
+// });
+
+$(document).ready(function() {
+  $('#displayButton').click(displayOutput);
 });
+
+function displayOutput() {
+  $('#output').css('margin-top', '20px');
+  $('#output').text('majorKey is equal to ' + majorKey).fadeIn('slow');
+}
