@@ -1,3 +1,3 @@
 # Talk It Out
-
-*See Prime assignment app for instructions. Then, update me!*
+Learning how to pair program
+Authors: Adam Biessener and Sam Fortin
