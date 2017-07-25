@@ -35,3 +35,31 @@ is more than one character in the string. Return `val` and set `majorKey` to the
 
 15. Your answer should be a string value that equals 7. Is that what you got?
 */
+
+var majorKey = 42;
+
+if(majorKey > 53) {
+    majorKey += 42;
+} else {
+    majorKey -= 13;
+}
+
+majorKey += '11';
+
+var keyChars = [];
+
+for(var i = 0; i < majorKey.length; i++) {
+    keyChars[i] = majorKey.charAt(i);
+}
+
+keyChars.pop();
+keyChars.shift();
+
+var reverse = '';
+
+for(var i = keyChars.length-1; i >= 0; i--) {
+    reverse += keyChars[i];
+}
+
+majorKey = parseInt(majorKey);
+reverse = parseInt(reverse);
