@@ -63,3 +63,36 @@ for(var i = keyChars.length-1; i >= 0; i--) {
 
 majorKey = parseInt(majorKey);
 reverse = parseInt(reverse);
+
+// switched programmers
+
+majorKey += reverse;
+
+if (majorKey < 60) {
+    majorKey = 14;
+} else if (majorKey === 2930) {
+    majorKey = 27;
+} else {
+    majorKey = 2;
+}
+
+i = 10;
+while(i > 0){
+    majorKey++;
+    i--;
+}
+
+function convertVal(val){
+    val = val.toString();
+    if(val.length > 1){
+        val = val.substr(1);
+    }
+    // majorKey = val;
+    return val;
+}
+
+majorKey = convertVal(majorKey);
+
+console.log("majorKey at 96: ", majorKey);
+
+
